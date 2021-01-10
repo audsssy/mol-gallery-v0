@@ -11,7 +11,7 @@ const ImageModal = ({ selectedImg, setSelectedImg }) => {
 
     return (
         <div className="backdrop" onClick={handleClick}>
-            <img src={selectedImg} alt="enlarged pic"/>
+            <img className="enlarged-img" src={selectedImg} alt="enlarged pic"/>
         </div>
     )
 }
