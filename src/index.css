@@ -15,30 +15,3 @@ body {
   max-width: 960px;
   margin: 0 auto;
 }
-
-.header {
-  display: flex;
-  height: 60px;
-  margin-top: 20px;
-  align-items: center;
-}
-.header div {
-  border: 1px #ccc solid;
-  padding: 10px;
-}
-.header-logo {
-  color: var(--primary);
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  font-weight: 800;
-  vertical-align: middle;
-  flex: 1;
-}
-.header-navigation {
-  color: var(--secondary);
-  display: flex;
-  justify-content: flex-end;
-  font-size: 1rem;
-  font-weight: 700;
-  flex: 1;
-}

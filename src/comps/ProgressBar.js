@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import useStorage from '../../../hooks/useStorage';
+import useStorage from '../hooks/useStorage';
 import './ProgressBar.css'
 
 const ProgressBar = ({ file, setFile }) => {
     const { url, progress } = useStorage(file);
-    // console.log("progress - " + progress, "url - " + url);
+    console.log("progress - " + progress, "url - " + url);
     
     useEffect(()=> {
         if (url) {

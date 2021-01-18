@@ -1,5 +1,6 @@
 .form-modal {
   text-align: center;
+  /* z-index: 1; */
 }
 
 .form-modal-button {

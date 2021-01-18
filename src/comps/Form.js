@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Form.css';
-import ImageUpload from '../imageUpload/ImageUpload';
+import ImageUpload from './ImageUpload';
 
 const Form = ({ toggleUploadStatus, uploadImgStatus, setUploadFile }) => {
     const [img, setImg] = useState(null);

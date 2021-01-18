@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 // import ProgressBar from './ProgressBar'
-import './Upload.css'
-import FormModal from '../../utils/modal/FormModal';
+import './UploadAction.css'
+import FormModal from '../../FormModal';
 
 
 const Upload = ({ setUploadFile }) => {

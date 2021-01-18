@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Portfolio.css'
-import Upload from './upload/Upload';
-import ImageGrid from './imageGrid/ImageGrid';
+import Upload from './upload/UploadAction';
+import ImageGrid from '../ImageGrid';
 import ImageModal from '../utils/modal/ImageModal';
 import ProgressBar from '../utils/progressBar/ProgressBar';
 
