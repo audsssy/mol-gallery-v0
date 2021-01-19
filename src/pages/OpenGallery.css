@@ -1,3 +1,7 @@
+.open-gallery {
+  text-align: center;
+}
+
 .open-gallery-title {
   margin-top: 60px;
   font-size: 2.6rem;
@@ -6,4 +10,20 @@
 
 .open-gallery-desc {
   text-align: center;
+}
+
+.royalties {
+  display: flex;
+  flex-direction: column;
+  border: 1px #ccc solid;
+}
+
+.flat-royalties {
+  align-items: center;
+  border: 1px #ccc solid;
+}
+
+.decaying-royalties {
+  align-items: center;
+  border: 1px #ccc solid;
 }

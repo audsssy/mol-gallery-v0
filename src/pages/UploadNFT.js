@@ -48,9 +48,14 @@ const UploadNFT = () => {
                 <input type="text"/>
             </div>
 
-                <div >
-                    <button onClick={handleClick}>Submit</button>
-                </div>
+            <div>
+                <input type="Checkbox"/>
+                <label >I agree to XYZ.</label>
+            </div>
+            
+            <div >
+                <button onClick={handleClick}>Submit</button>
+            </div>
         </div>
     )
 }

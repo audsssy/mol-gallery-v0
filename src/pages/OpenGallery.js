@@ -7,7 +7,7 @@ const OpenGallery = () => {
     const [value, setValue] = useState(null);
 
     return (
-        <div className="from-in-uploadnft">
+        <div className="open-gallery">
             <h1 className="open-gallery-title">Open a Gallery</h1>
             <p>Describe the steps to opening an NFT!</p>
 
@@ -37,17 +37,27 @@ const OpenGallery = () => {
 
             <div >
                 <p>Describe flat royalties vs decaying roayaltie</p>
-                <label>Flat Royalties</label>
-                <label>Decaying Royalties</label>
-                <br/>
-                <input type="radio" name="royalties" value="flat"/>
-                <input type="radio" name="royalties" value="decaying"/>
+                <div className="royalties">
+                    <div className="flat-royalties">
+                        <label>Flat Royalties</label>
+                        <input type="radio" name="royalties" value="flat"/>
+                    </div>
+                    <div className="decaying-royalties">
+                        <label>Decaying Royalties</label>
+                    <input type="radio" name="royalties" value="decaying"/>
+                    </div>
+                </div>
             </div>            
 
             <div>
                 <label >Royalties</label>
                 <br/>
                 <input type="text"/>
+            </div>
+
+            <div>
+                <input type="Checkbox"/>
+                <label >I agree to XYZ.</label>
             </div>
 
             <div >
