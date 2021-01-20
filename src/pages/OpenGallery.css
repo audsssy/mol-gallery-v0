@@ -13,17 +13,5 @@
 }
 
 .royalties {
-  display: flex;
-  flex-direction: column;
-  border: 1px #ccc solid;
-}
-
-.flat-royalties {
-  align-items: center;
-  border: 1px #ccc solid;
-}
-
-.decaying-royalties {
-  align-items: center;
   border: 1px #ccc solid;
 }

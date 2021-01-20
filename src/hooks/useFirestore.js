@@ -11,8 +11,8 @@ const useFirestore = (collection) => {
                 // console.log("snap in useFirestore " + snap);
                 let documents = [];
                 snap.forEach(doc => {
-                    // console.log("doc.data w/out ... - " + doc.data());
-                    // console.log("doc.data w/ ... - " + doc.id);
+                    // console.log("doc.data w/out '...' - " + doc.data());
+                    // console.log("doc.data w/ '...' - " + doc.id);
                     documents.push({ ...doc.data(), id: doc.id });
                 })
                 setDocs(documents);

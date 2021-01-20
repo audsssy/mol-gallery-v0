@@ -5,11 +5,8 @@ import './ImageUpload.css'
 const ImageUpload = ({ getFileForUpload }) => {
     // Image preview
     const [img, setImg] = useState(null);
-    
     const [error, setError] = useState(null);
-
     const types = ['image/png', 'image/jpeg'];
-
 
     const changeHandler = (e) => {
         let selected = e.target.files[0];

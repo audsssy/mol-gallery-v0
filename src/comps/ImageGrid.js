@@ -4,7 +4,7 @@ import useFirestore from '../hooks/useFirestore';
 import './ImageGrid.css'
 
 const ImageGrid = ({ setSelectedImg}) => {
-    const { docs } = useFirestore('images');
+    const { docs } = useFirestore('nft');
     // console.log(docs)
     
     return (

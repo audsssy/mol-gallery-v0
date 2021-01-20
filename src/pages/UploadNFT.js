@@ -1,61 +1,70 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom';
-import ProgressBar from '../comps/ProgressBar'
+import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
+import UploadingNFT from '../comps/UploadingNFT'
 import ImageUpload from '../comps/ImageUpload'
 import './UploadNFT.css'
 
 const UploadNFT = () => {    
-    const [file, setFile] = useState(null)
-    const history = useHistory();
+    const [title, setTitle] = useState('')
+    const [description, setDescription] = useState('')
+    const [img, setImg] = useState(null)
+    const [compliance, setCompliance] = useState(false)
+    const [gallery, setGallery] = useState('')
+    const [metadata, setMetadata] = useState(null)    
 
-    const getFileForUpload = (file) => {
-        console.log("child data - " + file);
-        setFile(file);
+    const getFileForUpload = (img) => {
+        setImg(img);
     }
 
-
-    const handleClick = (e) => {
-
+    const onSubmit = e => {
+        e.preventDefault();
         
-        history.push('/');
+        if (compliance) {
+            const nft = {
+                title: title,
+                description: description,
+                compliance: compliance,
+                gallery: "commons"
+            }
+            setMetadata(nft)
+        } else {
+            alert('You must accept!')
+        }
     }
+
+    // console.log(metadata, img)
 
     return (
         <div className="from-in-uploadnft">
             <h1 className="upload-nft-title">Upload NFT</h1>
             <p>Describe the steps to uploading an NFT!</p>
 
-            <div>  
-                <label>Title</label>
-                <br/>
-                <input type="text"/>
-            </div>
+            <form onSubmit={onSubmit}>
+                <div>  
+                    <label htmlFor="text">Title</label>
+                    <br/>
+                    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Enter Title"/>
+                </div>
 
-            <div>
-                <label>Description</label>
-                <br/>
-                <input type="text"/>
-            </div>
+                <div>
+                    <label htmlFor="description">Description</label>
+                    <br/>
+                    <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Enter Description"/>
+                </div>
 
-            <ImageUpload getFileForUpload={getFileForUpload}/>
+                <ImageUpload getFileForUpload={getFileForUpload}/>
 
-        {/* Need to move ProgressBar to a modal so that file is uploaded after submit button onClick*/}
-            {file && <ProgressBar file={file} setFile={setFile}/>} 
+                {metadata && <UploadingNFT metadata={metadata} img={img} setImg={setImg}/>} 
 
-            <div>
-                <label>Royalties</label>
-                <br/>
-                <input type="text"/>
-            </div>
-
-            <div>
-                <input type="Checkbox"/>
-                <label >I agree to XYZ.</label>
-            </div>
-            
-            <div >
-                <button onClick={handleClick}>Submit</button>
-            </div>
+                <div>
+                    <input type="Checkbox" checked={compliance} onChange={(e) => setCompliance(e.target.checked)}/>
+                    <label >I agree to XYZ.</label>
+                </div>
+                
+                <div >
+                    <button >Submit</button>
+                </div>
+            </form>
         </div>
     )
 }
